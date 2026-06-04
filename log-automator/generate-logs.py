@@ -17,7 +17,7 @@ print("Generating mock server.log: ")
 
 # Use 'with' to automatically close file once done
 with open("server.log", "w") as log_file:
-    for _ in range(100):
+    for _ in range(1000):
         # timestamp format: YYYY-MM-DD Hr:Min:Sec
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         ip = random.choice(ip_addresses)
@@ -28,4 +28,4 @@ with open("server.log", "w") as log_file:
         log_line = f"[{timestamp}] {ip} - {method} {endpoint} - STATUS: {status}\n"
         log_file.write(log_line)
 
-print("\nSuccessfully created 100 service.log entries!\n")
+print("\nSuccessfully created 1000 service.log entries!\n")
